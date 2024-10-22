@@ -1,18 +1,22 @@
 //❓❓ LAB QUESTION 6 & 7:
 let dictionary = [
-                "aardvark", "abattoir", "baby", "batman",
-                "cat", "cooper", "dog", "ghost", "lion",
-                "water", "window", "xylophone", "yawl",
-                "yello", "zebra"
-            ];
-
+    "aardvark", "abattoir", "baby", "batman",
+    "cat", "cooper", "dog", "ghost", "lion",
+    "water", "window", "xylophone", "yawl",
+    "yello", "zebra"
+];
 //❓❓ LAB QUESTION 8:
 //Search the array of words in the haystack parameter for the
 //word given in the needle parameter (get it? Searching for a needle in
 //a haystack?).
 //Return true when you find it, and false if you do not.
-function linearSearch(needle, haystack){
-    
+function linearSearch(needle, haystack) {
+    for (let j = 0; j < haystack.length; j++) {
+        if (needle == haystack[j]) {
+            return true;
+        }
+    }
+    return false;
 }
 
 console.log("Does it contain cat? ", linearSearch("cat", dictionary));
